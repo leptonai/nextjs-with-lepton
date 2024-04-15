@@ -5,7 +5,7 @@ export const runtime = 'edge';
 
 const openai = new OpenAI({
   // Use the LEPTON_API_TOKEN environment variable
-  apiKey: process.env.LEPTON_API_TOKEN!,
+  apiKey: process.env?.LEPTON_API_TOKEN || "Invalid API Key",
   baseURL: 'https://mixtral-8x7b.lepton.run/api/v1/',
 });
 
